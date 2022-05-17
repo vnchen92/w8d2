@@ -8,4 +8,15 @@ const range = (start, end) => {
     return result;
 }
 
-console.log(range(1, 3));
+// console.log(range(1, 3));
+
+const sumRec = arr => {
+    if (arr.length === 0) {
+        return 0;
+    }
+    let num = arr.pop();
+
+    return num += sumRec(arr);
+}
+
+console.log(sumRec([1, 2, 3]));
